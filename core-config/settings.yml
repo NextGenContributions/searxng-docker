@@ -1,0 +1,25 @@
+# Read the documentation before extending the defaults:
+# https://docs.searxng.org/admin/settings/
+
+use_default_settings: true
+
+server:
+  # https://docs.searxng.org/admin/settings/settings_server.html
+  limiter: false
+  public_instance: false
+  image_proxy: true
+  method: "POST"
+  default_http_headers:
+    X-Content-Type-Options : nosniff
+    X-Download-Options : noopen
+    X-Robots-Tag : noindex, nofollow
+    Referrer-Policy : no-referrer
+
+
+engines:
+  # https://docs.searxng.org/dev/engines/online/brave.html#module-searx.engines.braveapi
+  - name: braveapi
+    engine: braveapi
+    api_key: '${BRAVE_API_KEY}'
+    results_per_page: 20   # Optional (Max 20 per Brave specification)
+    inactive: false        # Explicitly set to false to make it active by default
