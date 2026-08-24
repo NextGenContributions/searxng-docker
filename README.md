@@ -14,3 +14,5 @@ To solve this, the custom image:
 - then starts the original SearxNG entrypoint
 
 This enables using an environment variable for the Brave API key while still keeping the config file in version control.
+
+The image also contains AWS Lambda web adapter, needed to run SearxNG on AWS Lambda environment.
