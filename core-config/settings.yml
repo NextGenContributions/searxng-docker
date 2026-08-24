@@ -15,6 +15,10 @@ server:
     X-Robots-Tag : noindex, nofollow
     Referrer-Policy : no-referrer
 
+search:
+  formats:
+    - html
+    - json
 
 engines:
   # https://docs.searxng.org/dev/engines/online/brave.html#module-searx.engines.braveapi
