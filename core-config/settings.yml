@@ -23,3 +23,13 @@ engines:
     api_key: '${BRAVE_API_KEY}'
     results_per_page: 20   # Optional (Max 20 per Brave specification)
     inactive: false        # Explicitly set to false to make it active by default
+  # Disable engines that have trouble initializing on startup
+  - name: ahmia
+    engine: ahmia
+    inactive: true
+  - name: torch
+    engine: torch
+    inactive: true
+  - name: wikidata
+    engine: wikidata
+    inactive: true
